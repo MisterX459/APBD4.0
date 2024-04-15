@@ -1,0 +1,150 @@
+﻿{
+  "info": {
+    "_postman_id": "6c946579-1e44-4e56-91ac-7a12b5b03f10",
+    "name": "Animal API",
+    "description": "Collection of requests for testing Animal API endpoints"
+  },
+  "item": [
+    {
+      "name": "Get Animals",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/animals-minimalapi/",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals-minimalapi"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Animal by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/animals-minimalapi/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals-minimalapi",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Animal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Id\":4,\"FirstName\":\"New Animal\",\"Category\":\"Category\",\"Weight\":50,\"FurColor\":\"Brown\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/animals-minimalapi",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals-minimalapi"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Edit Animal",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"FirstName\":\"Updated Name\",\"Category\":\"Updated Category\",\"Weight\":60,\"FurColor\":\"Updated Color\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/animals-minimalapi/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals-minimalapi",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Animal",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/animals-minimalapi/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals-minimalapi",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Visits for Animal",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/animals/1/visits",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals",
+            "1",
+            "visits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Visit for Animal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Id\":1,\"Date\":\"2024-04-15T12:00:00\",\"AnimalID\":1,\"Description\":\"New Visit\",\"Price\":50}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/animals/1/visits",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "animals",
+            "1",
+            "visits"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {
+    "disableBodyPruning": true
+  }
+}
